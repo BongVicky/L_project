@@ -7,28 +7,25 @@
                                 src="http://www.allweb.com.kh/themes/allweb/assets/images/allweb.png" alt="Allweb"
                                 width="70%"></a>
                 </ul>
-                <ul class="navbar-nav nav navbar-right fontt" style="padding-right: 15px;">
-                    <li class="nav-item active">
-                        <a class="nav-link active" href="/main">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/#">Contract</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/#">Project</a>
-                    </li>
-                    <ul class="nav navbar-nav navbar-right">
-                        <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button">
-                                Action
+
+                <ul class="navbar-nav nav navbar-right" style="padding-right: 15px;">
+                    <ul class="navbar-nav mr-auto ">
+                        <li class="nav-item">
+                            <a class="nav fontt" href="#">Home <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav fontt" href="#">Leave</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav fontt dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                User
                             </a>
-                            <ul class="dropdown-menu">
-                                <li><a href="#">Action</a></li>
-                                <li><a href="#">Another action</a></li>
-                                <li><a href="#">Something else here</a></li>
-                                <li role="separator" class="divider"></li>
-                                <li><a href="#">Log out</a></li>
-                    </ul>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="#">Action</a>
+                                <a class="dropdown-item" href="#">Another action</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="#">Something else here</a>
+                            </div>
                         </li>
                     </ul>
                 </ul>

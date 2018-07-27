@@ -6,8 +6,6 @@
                      alt="" class="img-rounded img-responsive"/>
             </div>
         </div>
-
-
         <div class="col-sm-8 col-md-8">
             <div class="row">
                 <div class="col-md-10 col-md-offset-1 col-sm-10 col-sm-offset-1">

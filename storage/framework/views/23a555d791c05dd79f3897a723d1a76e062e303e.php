@@ -57,7 +57,8 @@
         margin-bottom: 30px;
     }
     .fontt{
-        font-size: 18px;
+        font-size: 30px;
+        color: #333333; !important;
     }
     .card {
         margin-top: 20px;
@@ -125,6 +126,12 @@
         left: 0;
         right: 0;
     }
+    blockquote {
+        padding: 10px 20px;
+        margin: 0 0 20px;
+        font-size: 17.5px;
+        border-left: 5px solid #333333;
+    }
     .card.hovercard .card-info .card-title {
         padding:0 5px;
         font-size: 20px;
@@ -149,5 +156,4 @@
     .btn-pref .btn {
         -webkit-border-radius:0 !important;
     }
-
 </style>
