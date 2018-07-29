@@ -1,13 +1,12 @@
 <div class="row" style="background-color: #f1f1f1">
     <div class="container">
         <nav class="navbar navbar-expand-lg navbar-dark">
-            <div class="collapse navbar-collapse headerr" id="navbarSupportedContent">
-                <ul class="navbar-na">
+            <div class="collapse navbar-collapse headerr">
+                <ul>
                     <a class="navbar-brand" href="/main"><img
                                 src="http://www.allweb.com.kh/themes/allweb/assets/images/allweb.png" alt="Allweb"
                                 width="70%"></a>
                 </ul>
-
                 <ul class="navbar-nav nav navbar-right" style="padding-right: 15px;">
                     <ul class="navbar-nav mr-auto ">
                         <li class="nav-item">

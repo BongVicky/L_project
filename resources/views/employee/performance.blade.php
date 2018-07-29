@@ -1,6 +1,6 @@
-<div class="row" style="margin-top: 20px;">
+<div class="row" style="margin-top: 40px;">
     <div class="col-md-offset-1 col-sm-offset-1 col-md-10 col-sm-10">
-        <h1> My Performance</h1>
+        <h1><strong> My Performance</strong></h1>
         <hr>
         <div class="skills">
             <div class="skills-label">

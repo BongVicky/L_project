@@ -1,6 +1,6 @@
 <div class="row" style="margin-top: 40px; margin-bottom: 30px;">
     <div class="col-md-10 col-sm-10 col-md-offset-1 col-sm-offset-1">
-        <h1> Current Project </h1>
+        <h1><strong> Current Project </strong></h1>
         <div class="row">
             <div class="col-md-12">
                 <div class="jumbotron">

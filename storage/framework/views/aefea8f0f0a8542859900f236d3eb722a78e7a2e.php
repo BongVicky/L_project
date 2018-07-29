@@ -6,11 +6,11 @@
                      alt="" class="img-rounded img-responsive"/>
             </div>
         </div>
-        <div class="col-sm-8 col-md-8">
+        <div class="col-sm-8 col-md-8" style="margin-top: 0px;">
             <div class="row">
                 <div class="col-md-10 col-md-offset-1 col-sm-10 col-sm-offset-1">
                     <blockquote>
-                        <h2><strong>Bruce Wayne</strong></h2>
+                        <h2 style="margin-top: 0px"><strong>Bruce Wayne</strong></h2>
                         <p><strong><i class="fas fa-briefcase"></i> Position:</strong> Web Developer</p>
                         <p><strong><i class="glyphicon glyphicon-envelope"></i> Email:</strong> Allweb@allweb.com.kh</p>
                         <p><strong><i class="fas fa-boxes"></i> Project:</strong> Bank</p>

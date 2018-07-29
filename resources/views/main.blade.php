@@ -4,6 +4,7 @@
     @include('partial.head')
 </head>
 <body>
+
 @include('partial.nav')
 <div class="container">
     @include('new')
