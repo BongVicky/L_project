@@ -22,45 +22,14 @@
                         <td>seconds</td>
                     </tr>
                 </table>
-                <script type="text/javascript">
-                    function countdown(){
-                        var now = new Date();
-                        var eventDate = new Date(2018, 11 ,25);
-
-                        var currentTime = now.getTime();
-                        var eventTime = eventDate.getTime();
-
-                        var remTime = eventTime - currentTime;
-
-                        var s = Math.floor(remTime / 1000);
-                        var m = Math.floor(s / 60);
-                        var h = Math.floor(m / 60);
-                        var d = Math.floor(h / 24);
-
-                        h %= 24;
-                        m %= 60;
-                        s %= 60;
-
-                        h = (h < 10) ? "0" + h : h;
-                        m = (m < 10) ? "0" + m : m;
-                        s = (s < 10) ? "0" + s : s;
-
-                        document.getElementById("days").textContent = d;
-                        document.getElementById("days").innerText = d;
-
-                        document.getElementById("hours").textContent = d;
-                        document.getElementById("minutes").textContent = d;
-                        document.getElementById("seconds").textContent = d;
-                        setTimeout(countdown, 1000);
-                    }
-                </script>
             </div>
         </div>
+        <hr>
         <div class="wizard">
             <div class="wizard-inner">
                 <div class="connecting-line"></div>
                 <ul class="nav nav-tabs" role="tablist">
-                    <li role="presentation" class="disabled">
+                    <li role="presentation" class="disabled active">
                         <a href="#step1" data-toggle="tab" aria-controls="step1" role="tab" title="Step 1">
                             <span class="round-tab">
                                 <i class="fas fa-file-alt" style="margin-top: 25%"></i>
@@ -91,23 +60,57 @@
                 </ul>
             </div>
             <form role="form">
+                <h2 style="margin-top: 20px;">This is the contract of ALLWEB CO,.LTD with employee.</h2>
+                <p><strong>The application below will display all rule of the contract that the employee will make with
+                        the company.</strong></p>
+                <br>
                 <div class="tab-content">
-                    <div class="tab-pane active" role="tabpanel" id="step1">
-                        <h1> Hello World</h1>
+                    <div class="tab-pane active show" role="tabpanel" id="step1">
+                        <table cellpadding="30" class="table-responsive table fonttt">
+                            <tbody>
+                            <tr>
+                                <th scope="row">Name</th>
+                                <td>:</td>
+                                <td> Employee's name</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Place of Work</th>
+                                <td>:</td>
+                                <td> ALLWEB CO,.LTD</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Job Position</th>
+                                <td>:</td>
+                                <td> Web Developer</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Duration</th>
+                                <td>:</td>
+                                <td> 2 years</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Salary</th>
+                                <td>:</td>
+                                <td> 500$</td>
+                            </tr>
+                            </tbody>
+                        </table>
                     </div>
                     <div class="tab-pane" role="tabpanel" id="step2">
-                        <p>IV - VIII</p>
+                        <h3>Rule 1</h3>
+                        <p>NO food allowed</p>
                     </div>
                     <div class="tab-pane" role="tabpanel" id="step3">
-                        <p>IX - XIII</p>
+                        <h3>Rule 2</h3>
+                        <p>No drink allowed</p>
                     </div>
                     <div class="tab-pane" role="tabpanel" id="step4">
-                        <p>XIV - XVIII</p>
+                        <h3>Rule 3</h3>
+                        <p>No sleeping in work hour</p>
                     </div>
                     <div class="clearfix"></div>
                 </div>
             </form>
         </div>
-
     </div>
 </div>

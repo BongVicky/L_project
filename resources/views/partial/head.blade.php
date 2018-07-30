@@ -22,7 +22,6 @@
         margin-top: 40px;
         padding: 20px 0;
     }
-
     section .section-title {
         text-align: center;
         margin-bottom: 50px;
@@ -35,7 +34,6 @@
     #tabs h6.section-title{
         color: #333333;
     }
-
     #tabs .nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
         color: #333333;
         background-color: transparent;
@@ -54,19 +52,17 @@
     .wizard {
         margin: 20px auto;
     }
-
     .wizard .nav-tabs {
         position: relative;
         margin: 40px auto;
         margin-bottom: 0;
         border-bottom-color: #e0e0e0;
     }
-
     .wizard > div.wizard-inner {
         position: relative;
     }
     .info{
-      font-size: 40px;
+      font-size: 30px;
     }
     .info1{
         font-size: 20px;
@@ -82,14 +78,12 @@
         top: 50%;
         z-index: 1;
     }
-
     .wizard .nav-tabs > li.active > a, .wizard .nav-tabs > li.active > a:hover, .wizard .nav-tabs > li.active > a:focus {
         color: #555555;
         cursor: default;
         border: 0;
         border-bottom-color: transparent;
     }
-
     span.round-tab {
         width: 70px;
         height: 70px;
@@ -115,16 +109,13 @@
     .wizard li.active span.round-tab i{
         color: #5bc0de;
     }
-
     span.round-tab:hover {
         color: #333;
         border: 2px solid #333;
     }
-
     .wizard .nav-tabs > li {
         width: 25%;
     }
-
     .wizard li:after {
         content: " ";
         position: absolute;
@@ -136,7 +127,6 @@
         border-bottom-color: #5bc0de;
         transition: 0.1s ease-in-out;
     }
-
     .wizard li.active:after {
         content: " ";
         position: absolute;
@@ -147,7 +137,6 @@
         border: 10px solid transparent;
         border-bottom-color: #5bc0de;
     }
-
     .wizard .nav-tabs > li a {
         width: 70px;
         height: 70px;
@@ -155,34 +144,27 @@
         border-radius: 100%;
         padding: 0;
     }
-
     .wizard .nav-tabs > li a:hover {
         background: transparent;
     }
-
     .wizard .tab-pane {
         position: relative;
-        padding-top: 50px;
+        padding-top: 0px;
     }
-
     .wizard h3 {
         margin-top: 0;
     }
-
     @media( max-width : 585px ) {
-
         .wizard {
             width: 90%;
             height: auto !important;
         }
-
         span.round-tab {
             font-size: 16px;
             width: 50px;
             height: 50px;
             line-height: 50px;
         }
-
         .wizard .nav-tabs > li a {
             width: 50px;
             height: 50px;
@@ -199,6 +181,11 @@
         vertical-align: middle;
         margin-top: 20px;
         margin-bottom: 30px;
+    }
+    .fonttt{
+        font-size: 20px;
+        margin-left: 50px;
+        color: #333333;
     }
     .fontt{
         font-size: 25px;

@@ -7,7 +7,7 @@
 
 @include('partial.nav')
 <div class="container">
-    @include('new')
+    @yield('content')
 </div>
 
 <hr style="margin-top: 20px;">

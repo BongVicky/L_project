@@ -2,8 +2,10 @@
     <div class="container">
         <div class="col-sm-4 col-md-4">
             <div class="col-md-10 col-md-offset-2 col-sm-10 col-sm-offset-2">
-                {{--<img src='app_path()."/../"' alt="no logo">--}}
-                <img src="{{ URL::to('image/images.jpg') }}" alt="profile pic" class="img-rounded img-responsive">
+
+                {{--<img src="{{ URL::to('image/images.jpg') }}" alt="profile pic" class="img-rounded img-responsive">--}}
+                <img src="http://thetransformedmale.files.wordpress.com/2011/06/bruce-wayne-armani.jpg"
+                     alt="" class="img-rounded img-responsive"/>
             </div>
         </div>
         <div class="col-sm-8 col-md-8" style="margin-top: 0px;">

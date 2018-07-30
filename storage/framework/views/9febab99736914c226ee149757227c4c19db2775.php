@@ -10,10 +10,10 @@
                 <ul class="navbar-nav nav navbar-right" style="padding-right: 15px;">
                     <ul class="navbar-nav mr-auto ">
                         <li class="nav-item">
-                            <a class="nav fontt" href="#">Home <span class="sr-only">(current)</span></a>
+                            <a class="nav fontt" href="/main">Home <span class="sr-only">(current)</span></a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav fontt" href="#">Leave</a>
+                            <a class="nav fontt" href="/leave">Leave</a>
                         </li>
                         <li class="nav-item dropdown">
                             <a class="nav fontt dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">

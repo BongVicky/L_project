@@ -14,4 +14,5 @@
 Route::get('/', function () {
     return view('welcome');
 });
-Route::view('main','main');
+Route::view('main','new');
+Route::view('leave','leave');
