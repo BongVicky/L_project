@@ -65,7 +65,12 @@
     .wizard > div.wizard-inner {
         position: relative;
     }
-
+    .info{
+      font-size: 40px;
+    }
+    .info1{
+        font-size: 20px;
+    }
     .connecting-line {
         height: 2px;
         background: #e0e0e0;
