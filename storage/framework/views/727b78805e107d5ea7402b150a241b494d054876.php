@@ -4,8 +4,8 @@
     <?php echo $__env->make('partial.head', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
 </head>
 <body>
+<?php echo $__env->yieldContent('navheader'); ?>
 
-<?php echo $__env->make('partial.nav', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
 <div class="container">
     <?php echo $__env->yieldContent('content'); ?>
 </div>

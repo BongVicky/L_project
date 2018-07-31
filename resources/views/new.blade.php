@@ -1,4 +1,7 @@
 @extends('main')
+@section('navheader')
+    @include('partial.nav')
+@endsection
 @section('content')
     <section id="tabs" style="padding-right: 0px; margin-right: 0px;">
         <div class="card hovercard">

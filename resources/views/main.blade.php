@@ -4,8 +4,8 @@
     @include('partial.head')
 </head>
 <body>
+@yield('navheader')
 
-@include('partial.nav')
 <div class="container">
     @yield('content')
 </div>

@@ -16,3 +16,4 @@ Route::get('/', function () {
 });
 Route::view('main','new');
 Route::view('leave','leave');
+Route::view('login','login');

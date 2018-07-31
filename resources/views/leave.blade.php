@@ -5,8 +5,12 @@
             <fieldset class="box">
                 <legend align="center"><h1>Annual leave application form</h1></legend>
                 <div class="jumbotron">
-                    <h4>This form is for employees to use to apply to take annual leave. For more information about this
-                        application, please contact directly to HR department</h4>
+                    <p>This form is for employees to use to apply to take annual leave.</p>
+                    <blockquote style="border-left: 3px solid #333333;">
+                        <p>- Employee has 18 days for year for their annual leave</p>
+                        <p>- More information</p>
+                    </blockquote>
+                    <p>For more information about this application, please contact directly to HR department</p>
                 </div>
                 <hr>
                 <h2> Employee's detail</h2>
@@ -79,8 +83,8 @@
                 {!! Form::close() !!}
                 {!! Form::open(['url' => 'foo/bar']) !!}
                 <div class="row">
-                    <div class="col-md-4">
-                        {{ Form::label('hour_off','Total number of working days off:', array('style' => 'font-size: 20px;')) }}
+                    <div class="col-md-4 table-responsive">
+                        {{ Form::label('hour_off','Total number of working days off:', array('style' => 'font-size: 20px')) }}
                     </div>
                     <div class="col-md-8">
                         {{ Form::text('contact_number',null, array('class' => 'form-control'))}}

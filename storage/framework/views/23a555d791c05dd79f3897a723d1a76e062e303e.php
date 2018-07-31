@@ -188,7 +188,7 @@
         color: #333333;
     }
     .fontt{
-        font-size: 25px;
+        font-size: 20px;
         margin-left: 30px;
         color: #333333;
     }
@@ -227,6 +227,11 @@
         margin-top: -200px;
         min-width: 100%;
     }
+    .jumbotron p {
+        margin-bottom: 0px;
+        font-size: 18px;
+        font-weight: 200;
+    }
     .card.hovercard .useravatar {
         position: absolute;
         top: 15px;
@@ -258,9 +263,67 @@
         left: 0;
         right: 0;
     }
+    input[type=text], input[type=password] {
+        width: 100%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 1px solid #ccc;
+        box-sizing: border-box;
+    }
+
+    button {
+        background-color: #4CAF50;
+        color: white;
+        padding: 14px 20px;
+        margin: 8px 0;
+        border: none;
+        cursor: pointer;
+        width: 100%;
+    }
+
+    button:hover {
+        opacity: 0.8;
+    }
+
+    .cancelbtn {
+        width: auto;
+        padding: 10px 18px;
+        background-color: #f44336;
+    }
+
+    .imgcontainer {
+        text-align: center;
+        margin: 24px 0 12px 0;
+    }
+
+    img.avatar {
+        width: 40%;
+        size: 50%;
+    }
+
+    .container {
+        padding: 16px;
+    }
+
+    span.psw {
+        float: right;
+        padding-top: 16px;
+    }
+
+    /* Change styles for span and cancel button on extra small screens */
+    @media  screen and (max-width: 300px) {
+        span.psw {
+            display: block;
+            float: none;
+        }
+        .cancelbtn {
+            width: 100%;
+        }
+    }
     blockquote {
         padding: 10px 20px;
-        margin: 0 0 20px;
+        margin: 15px 0 15px;
         font-size: 17.5px;
         border-left: 5px solid #333333;
     }
