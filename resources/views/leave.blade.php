@@ -1,4 +1,7 @@
 @extends('main')
+@section('navheader')
+    @include('partial.nav')
+@endsection
 @section('content')
     <div class="row">
         <div class="col-md-12">

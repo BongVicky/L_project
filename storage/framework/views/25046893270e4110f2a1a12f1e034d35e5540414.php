@@ -1,3 +1,6 @@
+<?php $__env->startSection('navheader'); ?>
+    <?php echo $__env->make('partial.nav', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+<?php $__env->stopSection(); ?>
 <?php $__env->startSection('content'); ?>
     <section id="tabs" style="padding-right: 0px; margin-right: 0px;">
         <div class="card hovercard">

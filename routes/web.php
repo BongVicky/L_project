@@ -16,4 +16,8 @@ Route::get('/', function () {
 });
 Route::view('main','new');
 Route::view('leave','leave');
-Route::view('login','login');
+Route::view('login','auth.login');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
