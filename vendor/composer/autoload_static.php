@@ -24,6 +24,10 @@ class ComposerStaticInit19007f782ba0e1feba2a75a78644ea61
         array (
             'phpDocumentor\\Reflection\\' => 25,
         ),
+        'j' => 
+        array (
+            'jpmurray\\LaravelCountdown\\' => 26,
+        ),
         'X' => 
         array (
             'XdgBaseDir\\' => 11,
@@ -118,6 +122,10 @@ class ComposerStaticInit19007f782ba0e1feba2a75a78644ea61
             0 => __DIR__ . '/..' . '/phpdocumentor/reflection-common/src',
             1 => __DIR__ . '/..' . '/phpdocumentor/reflection-docblock/src',
             2 => __DIR__ . '/..' . '/phpdocumentor/type-resolver/src',
+        ),
+        'jpmurray\\LaravelCountdown\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/jpmurray/laravel-countdown/src',
         ),
         'XdgBaseDir\\' => 
         array (
@@ -333,6 +341,7 @@ class ComposerStaticInit19007f782ba0e1feba2a75a78644ea61
         'App\\Http\\Controllers\\Auth\\ResetPasswordController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/ResetPasswordController.php',
         'App\\Http\\Controllers\\Controller' => __DIR__ . '/../..' . '/app/Http/Controllers/Controller.php',
         'App\\Http\\Controllers\\HomeController' => __DIR__ . '/../..' . '/app/Http/Controllers/HomeController.php',
+        'App\\Http\\Controllers\\MainController' => __DIR__ . '/../..' . '/app/Http/Controllers/MainController.php',
         'App\\Http\\Kernel' => __DIR__ . '/../..' . '/app/Http/Kernel.php',
         'App\\Http\\Middleware\\CheckForMaintenanceMode' => __DIR__ . '/../..' . '/app/Http/Middleware/CheckForMaintenanceMode.php',
         'App\\Http\\Middleware\\EncryptCookies' => __DIR__ . '/../..' . '/app/Http/Middleware/EncryptCookies.php',
@@ -3642,6 +3651,13 @@ class ComposerStaticInit19007f782ba0e1feba2a75a78644ea61
         'Whoops\\Util\\SystemFacade' => __DIR__ . '/..' . '/filp/whoops/src/Whoops/Util/SystemFacade.php',
         'Whoops\\Util\\TemplateHelper' => __DIR__ . '/..' . '/filp/whoops/src/Whoops/Util/TemplateHelper.php',
         'XdgBaseDir\\Xdg' => __DIR__ . '/..' . '/dnoegel/php-xdg-base-dir/src/Xdg.php',
+        'jpmurray\\LaravelCountdown\\Countdown' => __DIR__ . '/..' . '/jpmurray/laravel-countdown/src/Countdown.php',
+        'jpmurray\\LaravelCountdown\\CountdownServiceProvider' => __DIR__ . '/..' . '/jpmurray/laravel-countdown/src/CountdownServiceProvider.php',
+        'jpmurray\\LaravelCountdown\\Exceptions\\InvalidArgumentToCountdown' => __DIR__ . '/..' . '/jpmurray/laravel-countdown/src/Exceptions/InvalidArgumentToCountdown.php',
+        'jpmurray\\LaravelCountdown\\Exceptions\\InvalidDateFormatToCountdown' => __DIR__ . '/..' . '/jpmurray/laravel-countdown/src/Exceptions/InvalidDateFormatToCountdown.php',
+        'jpmurray\\LaravelCountdown\\Exceptions\\InvalidPropertyStringForHumanException' => __DIR__ . '/..' . '/jpmurray/laravel-countdown/src/Exceptions/InvalidPropertyStringForHumanException.php',
+        'jpmurray\\LaravelCountdown\\Facades\\CountdownFacade' => __DIR__ . '/..' . '/jpmurray/laravel-countdown/src/Facades/CountdownFacade.php',
+        'jpmurray\\LaravelCountdown\\Traits\\CalculateTimeDiff' => __DIR__ . '/..' . '/jpmurray/laravel-countdown/src/Traits/CalculateTimeDiff.php',
         'phpDocumentor\\Reflection\\DocBlock' => __DIR__ . '/..' . '/phpdocumentor/reflection-docblock/src/DocBlock.php',
         'phpDocumentor\\Reflection\\DocBlockFactory' => __DIR__ . '/..' . '/phpdocumentor/reflection-docblock/src/DocBlockFactory.php',
         'phpDocumentor\\Reflection\\DocBlockFactoryInterface' => __DIR__ . '/..' . '/phpdocumentor/reflection-docblock/src/DocBlockFactoryInterface.php',

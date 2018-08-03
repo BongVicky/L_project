@@ -18,13 +18,13 @@
                 <hr>
                 <h2> Employee's detail</h2>
                 <br>
-                {!! Form::open(['url' => 'foo/bar']) !!}
+                {!! Form::open(['url' => 'leave']) !!}
                 <div class="row">
                     <div class="col-md-4">
                         {{ Form::label('employee_name','Employee_Name:', array('style' => 'font-size: 20px;')) }}
                     </div>
                     <div class="col-md-8">
-                        {{ Form::text('employee',null, array('class' => 'form-control', 'placeholder' => 'auto fill'))}}
+                        <strong>{{ Auth::user()->name }}</strong>
                     </div>
                 </div>
                 {!! Form::close() !!}

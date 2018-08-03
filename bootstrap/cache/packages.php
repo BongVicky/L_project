@@ -6,6 +6,17 @@
       0 => 'Fideloper\\Proxy\\TrustedProxyServiceProvider',
     ),
   ),
+  'jpmurray/laravel-countdown' => 
+  array (
+    'providers' => 
+    array (
+      0 => 'jpmurray\\LaravelCountdown\\CountdownServiceProvider',
+    ),
+    'aliases' => 
+    array (
+      'Countdown' => 'jpmurray\\LaravelCountdown\\Facades\\CountdownFacade',
+    ),
+  ),
   'laravel/tinker' => 
   array (
     'providers' => 

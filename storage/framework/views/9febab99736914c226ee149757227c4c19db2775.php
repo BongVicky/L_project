@@ -21,7 +21,7 @@
                                 <?php echo e(Auth::user()->name); ?> <span class="caret"></span>
                             </a>
                             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="#">Action</a>
+                                <a class="dropdown-item" href="<?php echo e(route('register')); ?>"><?php echo e(__('Register')); ?></a>
                                 <a class="dropdown-item" href="#">Another action</a>
                                 <div class="dropdown-divider"></div>
                                 <a class="dropdown-item" href="<?php echo e(route('logout')); ?>"
