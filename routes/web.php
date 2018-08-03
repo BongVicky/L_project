@@ -14,10 +14,12 @@
 Route::get('/', function () {
     return view('welcome');
 });
-Route::view('main','new');
+//Route::view('main','new');
 Route::view('leave','leave');
-Route::view('login','auth.login');
+Route::view('login','login');
 
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/main', 'HomeController@emp')->name('main');
+Route::view('/new','newemp');

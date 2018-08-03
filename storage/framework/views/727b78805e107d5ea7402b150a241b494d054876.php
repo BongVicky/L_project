@@ -1,5 +1,5 @@
 <!Doctype>
-<html>
+<html lang="<?php echo e(str_replace('_', '-', app()->getLocale())); ?>">
 <head>
     <?php echo $__env->make('partial.head', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
 </head>

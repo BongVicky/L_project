@@ -90,7 +90,7 @@
                         {{ Form::label('hour_off','Total number of working days off:', array('style' => 'font-size: 20px')) }}
                     </div>
                     <div class="col-md-8">
-                        {{ Form::text('contact_number',null, array('class' => 'form-control'))}}
+                        {{ Form::text('hour_off',null, array('class' => 'form-control'))}}
                     </div>
                 </div>
                 {!! Form::close() !!}

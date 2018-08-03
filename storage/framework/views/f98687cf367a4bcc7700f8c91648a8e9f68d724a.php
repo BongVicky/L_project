@@ -14,7 +14,7 @@
                     <tr>
                         <th scope="row">Name</th>
                         <td>:</td>
-                        <td> Employee's name</td>
+                        <td><?php echo e(Auth::user()->name); ?></td>
                         <td></td>
                         <td></td>
                     </tr>

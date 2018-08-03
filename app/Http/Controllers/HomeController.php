@@ -25,4 +25,7 @@ class HomeController extends Controller
     {
         return view('home');
     }
+    public function emp(){
+        return view('new');
+    }
 }

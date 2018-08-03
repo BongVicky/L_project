@@ -238,11 +238,19 @@
         left: 0;
         right: 0;
     }
+    input[type=text], input[type=password] {
+        width: 100%;
+        padding: 12px 20px;
+        margin: 0px 0;
+        display: inline-block;
+        border: 1px solid #ccc;
+        box-sizing: border-box;
+    }
     .progress {
         height: 20px;
         margin-bottom: 20px;
         overflow: hidden;
-        background-color: #333333;
+        background-color: #33333388;
         border-radius: 4px;
         -webkit-box-shadow: inset 0 1px 2px rgba(0,0,0,.1);
         box-shadow: inset 0 1px 2px rgba(0,0,0,.1);
@@ -263,15 +271,6 @@
         left: 0;
         right: 0;
     }
-    input[type=text], input[type=password] {
-        width: 100%;
-        padding: 12px 20px;
-        margin: 8px 0;
-        display: inline-block;
-        border: 1px solid #ccc;
-        box-sizing: border-box;
-    }
-
     button {
         background-color: #4CAF50;
         color: white;
@@ -284,6 +283,7 @@
 
     button:hover {
         opacity: 0.8;
+
     }
 
     .cancelbtn {

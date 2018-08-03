@@ -13,7 +13,7 @@
                 <img alt="" src="http://thetransformedmale.files.wordpress.com/2011/06/bruce-wayne-armani.jpg"
                      class=" img-rounded">
             </div>
-            <div class="card-info"><span class="card-title">Bruce Wayne</span>
+            <div class="card-info"><span class="card-title"><?php echo e(Auth::user()->name); ?></span>
             </div>
         </div>
         <br>
