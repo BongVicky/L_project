@@ -57,23 +57,10 @@
         </div>
         <hr>
         <div class="row">
-            <table align="center">
-                <tr class="info">
-                    <td colspan="4"><strong>Contract countdown</strong></td>
-                </tr>
-                <tr class="info">
-                    <td id="days">120</td>
-                    <td id="hours">4</td>
-                    <td id="minutes">12</td>
-                    <td id="seconds">22</td>
-                </tr>
-                <tr class="info1">
-                    <td>days</td>
-                    <td>hours</td>
-                    <td>minutes</td>
-                    <td>seconds</td>
-                </tr>
-            </table>
+            <div class="col-md-offset-3 col-md-6" style="text-align: center;">
+                <h2><strong>Contract Countdown</strong></h2>
+                <p id="countdown" style="font-size: 25px;"></p>
+            </div>
         </div>
     </div>
 </div>
