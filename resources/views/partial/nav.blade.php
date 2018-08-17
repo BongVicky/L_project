@@ -15,10 +15,10 @@
                         <li class="nav-item">
                             <a class="nav fontt" href="/leave">Leave</a>
                         </li>
-                        <li class="nav-item dropdown">
+                        <li class="nav-item dropdown responsive">
                             <a id="navbarDropdown" class="nav fontt" href="#" role="button"
                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                {{ Auth::user()->name }} <span class="caret"></span>
+                                {{ Auth::user()->name }}<span class="caret"></span>
                             </a>
                             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
                                 <a class="dropdown-item" href="{{ route('register') }}">{{ __('Register') }}</a>

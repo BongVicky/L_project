@@ -12,14 +12,28 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('auth.login');
 });
-//Route::view('main','new');
+Route::get('/register', function (){
+    return view('auth.register');
+});
+Route::view('main','new');
 Route::view('leave','leave');
 Route::view('login','login');
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
-Route::get('/main', 'HomeController@emp')->name('main');
-Route::view('/new','newemp');
+
+//Route::get('/admin', 'AdminController@index');
+
+//Route::get('/main', 'HomeController@emp');
+//Route::view('/new','newemp');
+
+Route::prefix('admin')->group(function (){
+    Route::get('/login', 'Auth\AdminLoginController@showLoginForm')->name('admin.login');
+    Route::post('/login', 'Auth\AdminLoginController@login')->name('admin.login.submit');
+    Route::get('/', 'AdminController@index')->name('admin.dashboard');
+});
+Route::resource('/contracts','ContractsController');
+Route::resource('/employees','EmployeesController');
+Route::get('/profile', 'HomeController@index')->name('home');

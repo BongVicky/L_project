@@ -21,10 +21,10 @@
                 {!! Form::open(['url' => 'leave']) !!}
                 <div class="row">
                     <div class="col-md-4">
-                        {{ Form::label('employee_name','Employee_Name:', array('style' => 'font-size: 20px;')) }}
+                        {{ Form::label('employee_name','Employee Name:', array('style' => 'font-size: 20px;')) }}
                     </div>
                     <div class="col-md-8">
-                        <strong>{{ Auth::user()->name }}</strong>
+                        <strong style="font-size: 20px;">{{ Auth::user()->name }}</strong>
                     </div>
                 </div>
                 {!! Form::close() !!}

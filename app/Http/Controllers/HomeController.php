@@ -23,9 +23,6 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('leave');
-    }
-    public function emp(){
         return view('new');
     }
 }

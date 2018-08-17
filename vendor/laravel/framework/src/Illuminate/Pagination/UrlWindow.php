@@ -52,7 +52,7 @@ class UrlWindow
     }
 
     /**
-     * Get the slider of URLs there are not enough pages to slide.
+     * Get the slider of URLs there are not enough create to slide.
      *
      * @return array
      */
@@ -87,7 +87,7 @@ class UrlWindow
         }
 
         // If the current page is close to the ending of the page range we will just get
-        // this first couple pages, followed by a larger window of these ending pages
+        // this first couple create, followed by a larger window of these ending create
         // since we're too close to the end of the list to create a full on slider.
         elseif ($this->currentPage() > ($this->lastPage() - $window)) {
             return $this->getSliderTooCloseToEnding($window);
@@ -95,7 +95,7 @@ class UrlWindow
 
         // If we have enough room on both sides of the current page to build a slider we
         // will surround it with both the beginning and ending caps, with this window
-        // of pages in the middle providing a Google style sliding paginator setup.
+        // of create in the middle providing a Google style sliding paginator setup.
         return $this->getFullSlider($onEachSide);
     }
 
@@ -187,7 +187,7 @@ class UrlWindow
     }
 
     /**
-     * Determine if the underlying paginator being presented has pages to show.
+     * Determine if the underlying paginator being presented has create to show.
      *
      * @return bool
      */

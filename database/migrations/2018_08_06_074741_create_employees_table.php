@@ -17,13 +17,13 @@ class CreateEmployeesTable extends Migration
             $table->increments('id');
             $table->string('first_name',30);
             $table->string('last_name',30);
-            $table->char('gender','5');
-            $table->date('dob');
-            $table->date('hire_date');
-            $table->integer('position_id');
+            $table->string('gender','6');
+            $table->string('dob');
+            $table->string('hire_date');
+            $table->string('position');
             $table->string('email');
-            $table->decimal('monthly_leave', 4,2);
-            $table->integer('role_id');
+            $table->integer('number');
+            $table->decimal('monthly_leave', 4,2)->default(18.00);
             $table->timestamps();
         });
     }

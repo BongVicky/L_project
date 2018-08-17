@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreatePositionTable extends Migration
+class CreateCronTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,9 +13,11 @@ class CreatePositionTable extends Migration
      */
     public function up()
     {
-        Schema::create('position', function (Blueprint $table) {
+        Schema::create('cron', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('type_name',20);
+            $table->integer('contract_id')->unique();
+            $table->boolean('send');
+            $table->timestamps();
         });
     }
 
@@ -26,6 +28,6 @@ class CreatePositionTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('position');
+        Schema::dropIfExists('cron');
     }
 }
