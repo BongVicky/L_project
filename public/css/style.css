@@ -1,0 +1,26 @@
+.icon-space{
+    padding-right: 10px;
+    border-color: #FFFFFF !important;
+}
+.img-size{
+    width: 40px;
+}
+.crud{
+    display: inline-block;
+}
+.button-space{
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+a, u {
+    text-decoration: none !important;
+}
+
+li{
+    list-style-type: none;
+}
+
+ul{
+    padding-left: 0%;
+
+}

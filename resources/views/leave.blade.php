@@ -1,4 +1,4 @@
-@extends('main')
+@extends('partial.main')
 @section('navheader')
     @include('partial.nav')
 @endsection
@@ -18,92 +18,89 @@
                 <hr>
                 <h2> Employee's detail</h2>
                 <br>
-                {!! Form::open(['url' => 'leave']) !!}
-                <div class="row">
-                    <div class="col-md-4">
-                        {{ Form::label('employee_name','Employee Name:', array('style' => 'font-size: 20px;')) }}
+                <form method="post" action="{{url('profile')}}" enctype="multipart/form-data" style="font-size: 20px;">
+                    @csrf
+                    <div class="row">
+                        <div class="col-md-4">
+                            <label for="name">Employee Name: </label>
+                        </div>
+                        <div class="col-md-8">
+                            <strong>
+                                {{ Auth::user()->employee->first_name }} {{ Auth::user()->employee->last_name }}
+                            </strong>
+                        </div>
                     </div>
-                    <div class="col-md-8">
-                        <strong style="font-size: 20px;">{{ Auth::user()->name }}</strong>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <label for="position">Position: </label>
+                        </div>
+                        <div class="col-md-8">
+                            <strong>
+                                {{ Auth::user()->employee->position }}
+                            </strong>
+                        </div>
                     </div>
-                </div>
-                {!! Form::close() !!}
-                {!! Form::open(['url' => 'foo/bar']) !!}
-
-                <div class="row">
-                    <div class="col-md-4">
-                        {{ Form::label('position','Position:', array('style' => 'font-size: 20px;')) }}
+                    <div class="row">
+                        <div class="col-md-4">
+                            <label for="number">Mobile Phone: </label>
+                        </div>
+                        <div class="col-md-8">
+                            <strong>
+                                {{ Auth::user()->employee->number}}
+                            </strong>
+                        </div>
                     </div>
-                    <div class="col-md-8">
-                        {{ Form::text('position',null, array('class' => 'form-control', 'placeholder' => 'auto fill'))}}
+                    <hr>
+                    <h2> Leave type</h2>
+                    <br>
+                    <div class="row">
+                        <div class="col-md-1">
+                            <label for="from_date">From:</label>
+                        </div>
+                        <div class="col-md-5">
+                            <input type="text" class="form-control date datepicker" name="leave_date">
+                        </div>
+                        <div class="col-md-1">
+                            <label for="to_date">To: </label>
+                        </div>
+                        <div class="col-md-5">
+                            <input type="text" class="form-control date" id="datepicker1" name="return_date">
+                        </div>
                     </div>
-                </div>
-                {!! Form::close() !!}
-                <div class="row">
-                    <div class="col-md-4">
-                        {{ Form::label('contact_number','Mobile Phone:', array('style' => 'font-size: 20px;')) }}
+                    <div class="row">
+                        <div class="col-md-4 table-responsive">
+                            <label for="type">Leave Type: </label>
+                        </div>
+                        <div class="col-md-8">
+                            <input type="text" class="form-control" name="leave_type">
+                        </div>
                     </div>
-                    <div class="col-md-8">
-                        {{ Form::text('contact_number',null, array('class' => 'form-control', 'placeholder' => 'auto fill'))}}
+                    <div class="row">
+                        <div class="col-md-4 table-responsive">
+                            <label for="hour_off">Total number of leaving days: </label>
+                        </div>
+                        <div class="col-md-8">
+                            <input type="text" class="form-control" name="hour_off">
+                        </div>
                     </div>
-                </div>
-                {!! Form::close() !!}
-                <hr>
-
-                <h2> Leave type</h2>
-                <br>
-                {!! Form::open(['url' => 'foo/bar']) !!}
-                <div class="row">
-                    <div class="col-md-1">
-                        {{ Form::label('type','Kind:', array('style' => 'font-size: 20px;')) }}
-                    </div>
-                    <div class="col-md-5">
-                        {{ Form::text('type',null, array('class' => 'form-control', 'placeholder' => 'half day'))}}
-                    </div>
-                    <div class="col-md-1">
-                        {{ Form::label('type','Type:', array('style' => 'font-size: 20px;')) }}
-                    </div>
-                    <div class="col-md-5">
-                        {{ Form::text('pay_type',null, array('class' => 'form-control', 'placeholder' => 'sick leave'))}}
-                    </div>
-                </div>
-                {!! Form::close() !!}
-                {!! Form::open(['url' => 'foo/bar']) !!}
-                <div class="row">
-                    <div class="col-md-1">
-                        {{ Form::label('from_date','From:', array('style' => 'font-size: 20px;')) }}
-                    </div>
-                    <div class="col-md-5">
-                        {{ Form::text('from_date',null, array('class' => 'form-control','placeholder' => 'yyyy/mm/dd'))}}
-                    </div>
-                    <div class="col-md-1">
-                        {{ Form::label('to_date','To:', array('style' => 'font-size: 20px;')) }}
-                    </div>
-                    <div class="col-md-5">
-                        {{ Form::text('to_date',null, array('class' => 'form-control','placeholder' => 'yyyy/mm/dd'))}}
-                    </div>
-                </div>
-                {!! Form::close() !!}
-                {!! Form::open(['url' => 'foo/bar']) !!}
-                <div class="row">
-                    <div class="col-md-4 table-responsive">
-                        {{ Form::label('hour_off','Total number of working days off:', array('style' => 'font-size: 20px')) }}
-                    </div>
-                    <div class="col-md-8">
-                        {{ Form::text('hour_off',null, array('class' => 'form-control'))}}
-                    </div>
-                </div>
-                {!! Form::close() !!}
-                <hr>
-                <h2>Reason:</h2>
-                <br>
-                {!! Form::open(['url' => 'foo/bar']) !!}
-                {{ Form::textarea('reason',null, array('class' => 'form-control'))}}
-                {!! Form::close() !!}
-                <br>
-                {{ Form::submit('Request', array('class'=>'btn btn-success btn-block btn-lg')) }}
-                {!! Form::close() !!}
+                    <hr>
+                    <h2>Reason:</h2>
+                    <br>
+                    <textarea class="form-control" name="reason"></textarea>
+                    <br>
+                    <button type="submit" class="btn btn-success btn-block btn-lg">Request</button>
+                </form>
             </fieldset>
         </div>
     </div>
+    <script type="text/javascript">
+        $('#datepicker').datepicker({
+            autoclose: true,
+            format: 'yyyy-mm-dd'
+        });
+        $('#datepicker1').datepicker({
+            autoclose: true,
+            format: 'yyyy-mm-dd'
+        });
+    </script>
 @endsection

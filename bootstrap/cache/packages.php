@@ -6,6 +6,17 @@
       0 => 'Fideloper\\Proxy\\TrustedProxyServiceProvider',
     ),
   ),
+  'intervention/image' => 
+  array (
+    'providers' => 
+    array (
+      0 => 'Intervention\\Image\\ImageServiceProvider',
+    ),
+    'aliases' => 
+    array (
+      'Image' => 'Intervention\\Image\\Facades\\Image',
+    ),
+  ),
   'laravel/tinker' => 
   array (
     'providers' => 
@@ -23,6 +34,17 @@
     array (
       'Form' => 'Collective\\Html\\FormFacade',
       'Html' => 'Collective\\Html\\HtmlFacade',
+    ),
+  ),
+  'maddhatter/laravel-fullcalendar' => 
+  array (
+    'providers' => 
+    array (
+      0 => 'MaddHatter\\LaravelFullcalendar\\ServiceProvider',
+    ),
+    'aliases' => 
+    array (
+      'Calendar' => 'MaddHatter\\LaravelFullcalendar\\Facades\\Calendar',
     ),
   ),
   'nunomaduro/collision' => 

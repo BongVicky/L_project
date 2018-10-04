@@ -16,9 +16,10 @@ class CreateContractsTable extends Migration
         Schema::create('contracts', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('emp_id');
+            $table->string('p_name');
             $table->integer('salary');
-            $table->string('from_date');
-            $table->string('to_date');
+            $table->date('from_date');
+            $table->date('to_date');
             $table->timestamps();
         });
     }

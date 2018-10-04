@@ -8,7 +8,7 @@
 <body>
 <div class="container">
     <h2>Edit A Form</h2><br  />
-    <form method="post" action="{{action('EmployeesController@update', $id)}}">
+    <form method="post" action="{{action('EmployeeController@update', $id)}}">
         @csrf
         <input name="_method" type="hidden" value="PATCH">
         <div class="row">
@@ -62,6 +62,13 @@
             <div class="form-group col-md-4">
                 <strong> DOB :</strong>
                 <input class="date form-control" type="text" id="datepicker" name="dob">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4"></div>
+            <div class="form-group col-md-4">
+                <label for="Leave"> monthly_leave:</label>
+                <input type="text" class="form-control" name="monthly_leave" placeholder="18" value="18.00">
             </div>
         </div>
         <div class="row">

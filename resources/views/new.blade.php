@@ -1,4 +1,5 @@
-@extends('main')
+@extends('partial.main')
+@section('title','Profile')
 @section('navheader')
     @include('partial.nav')
 @endsection
@@ -7,14 +8,14 @@
         <div class="card hovercard">
             <div class="card-background">
                 <img class="card-bkimg" alt=""
-                     src="http://thetransformedmale.files.wordpress.com/2011/06/bruce-wayne-armani.jpg">
+                     src="/image/{{ Auth::user()->employee->avatar }}">
                 <!-- http://lorempixel.com/850/280/people/9/ -->
             </div>
             <div class="useravatar">
-                <img alt="" src="http://thetransformedmale.files.wordpress.com/2011/06/bruce-wayne-armani.jpg"
-                     class=" img-rounded">
+                <img src="/image/{{ Auth::user()->employee->avatar }}" style="width: 150px; height: 150px; border-radius: 50%"
+                     alt="">
             </div>
-            <div class="card-info"><span class="card-title">{{ Auth::user()->name }}</span>
+            <div class="card-info"><span class="card-title">{{ Auth::user()->employee->first_name }} {{ Auth::user()->employee->last_name }}</span>
             </div>
         </div>
         <br>
@@ -26,11 +27,9 @@
                            role="tab" aria-controls="nav-profile" aria-selected="true">Profile</a>
                         <a class="nav-item nav-link" id="nav-contract-tab" data-toggle="tab" href="#nav-contract"
                            role="tab" aria-controls="nav-contract" aria-selected="false">Contract</a>
-                        <a class="nav-item nav-link" id="nav-project-tab" data-toggle="tab" href="#nav-project"
-                           role="tab" aria-controls="nav-project" aria-selected="false">Project</a>
-                        <a class="nav-item nav-link" id="nav-performance-tab" data-toggle="tab" href="#nav-performance"
-                           role="tab" aria-controls="nav-performance" aria-selected="false">Performance</a>
-                    </div>
+                        <a class="nav-item nav-link" id="nav-leave-tab" data-toggle="tab" href="#nav-leave"
+                           role="tab" aria-controls="nav-leave" aria-selected="false">Leave</a>
+                        </div>
                 </nav>
                 <div class="tab-content py-3 px-3 px-sm-0" id="nav-tabContent">
                     <div class="tab-pane fade show active" id="nav-profile" role="tabpanel"
@@ -44,15 +43,9 @@
                             @include('employee.contract')
                         </div>
                     </div>
-                    <div class="tab-pane fade" id="nav-project" role="tabpanel" aria-labelledby="nav-project-tab">
+                    <div class="tab-pane fade" id="nav-leave" role="tabpanel" aria-labelledby="nav-leave-tab">
                         <div class="container">
-                            @include('employee.project')
-                        </div>
-                    </div>
-                    <div class="tab-pane fade" id="nav-performance" role="tabpanel"
-                         aria-labelledby="nav-performance-tab">
-                        <div class="container">
-                            @include('employee.performance')
+                            @include('employee.leave_table')
                         </div>
                     </div>
                 </div>

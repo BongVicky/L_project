@@ -1,17 +1,21 @@
-<!Doctype>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-<head>
-    @include('partial.head')
-</head>
-<body>
-@yield('navheader')
+<!doctype html>
+<html lang="{{ app()->getLocale() }}">
+@yield('style')
+@include('partials._head')
 
-<div class="container">
-    @yield('content')
+<body>
+
+@include('partials._nav')
+<div class="container-fluid">
+    <div class="row">
+
+        @include('partials._bar')
+        @yield('content')
+
+    </div>
 </div>
 
-<hr style="margin-top: 20px;">
-<p class="text-center">Copyright ALLWEB - All Rights Reserved </p>
-@include('partial.script')
+@include('partials._javascripts')
 </body>
+
 </html>

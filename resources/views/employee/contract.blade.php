@@ -13,7 +13,7 @@
                     <tr>
                         <th scope="row">Name</th>
                         <td>:</td>
-                        <td>{{ Auth::user()->name }}</td>
+                        <td>{{ Auth::user()->employee->first_name }} {{ Auth::user()->employee->last_name }}</td>
                         <td></td>
                         <td></td>
                     </tr>
@@ -27,30 +27,31 @@
                     <tr>
                         <th scope="row">Job Position</th>
                         <td>:</td>
-                        <td> Web Developer</td>
+                        <td>{{ Auth::user()->employee->position }}</td>
                         <td></td>
                         <td></td>
                     </tr>
                     <tr>
                         <th scope="row">Start date</th>
                         <td>:</td>
-                        <td> {{ Auth::user()->created_at }}</td>
-                        <th scope="row" rowspan="2" style="vertical-align: middle">Duration:</th>
-                        <td rowspan="2" style="vertical-align: middle">2 years</td>
+                        <td>{{ Auth::user()->contract->from_date }} </td>
+                        <td></td>
+                        <td></td>
                     </tr>
                     <tr>
                         <th scope="row">End date</th>
                         <td>:</td>
-                        <td> 2020/07/16</td>
+                        <td> {{ Auth::user()->contract->to_date }} </td>
                     </tr>
                     <tr>
                         <th scope="row">Salary</th>
                         <td>:</td>
-                        <td> 500$</td>
+                        <td>  {{ Auth::user()->contract->salary }} $</td>
                         <td></td>
                         <td></td>
                     </tr>
                     </tbody>
+
                 </table>
             </form>
         </div>

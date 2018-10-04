@@ -17,8 +17,7 @@
         <thead>
         <tr>
             <th>ID</th>
-            <th>First name</th>
-            <th>last name</th>
+            <th>Name</th>
             <th>Gender</th>
             <th>Email</th>
             <th>Number</th>
@@ -35,8 +34,7 @@
             @endphp
             <tr>
                 <td>{{$employee['id']}}</td>
-                <td>{{$employee['first_name']}}</td>
-                <td>{{$employee['last_name']}}</td>
+                <td>{{$employee['first_name']}} {{$employee['last_name']}} </td>
                 <td>{{$employee['gender']}}</td>
                 <td>{{$employee['email']}}</td>
                 <td>{{$employee['number']}}</td>
@@ -44,9 +42,9 @@
                 <td>{{$employee['hire_date']}}</td>
 
 
-                <td><a href="{{action('EmployeesController@edit', $employee['id'])}}" class="btn btn-warning">Edit</a></td>
+                <td><a href="{{action('EmployeeController@edit', $employee['id'])}}" class="btn btn-warning">Edit</a></td>
                 <td>
-                    <form action="{{action('EmployeesController@destroy', $employee['id'])}}" method="post">
+                    <form action="{{action('EmployeeController@destroy', $employee['id'])}}" method="post">
                         @csrf
                         <input name="_method" type="hidden" value="DELETE">
                         <button class="btn btn-danger" type="submit">Delete</button>

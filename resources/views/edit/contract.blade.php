@@ -1,62 +1,44 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="utf-8">
-    <title>Edit </title>
-    <link rel="stylesheet" href="{{asset('css/app.css')}}">
-</head>
-<body>
-<div class="container">
-    <h2>Edit A Form</h2><br  />
-    <form method="post" action="{{action('ContractsController@update', $id)}}">
-        @csrf
-        <input name="_method" type="hidden" value="PATCH">
-        <div class="row">
-            <div class="col-md-4"></div>
-            <div class="form-group col-md-4">
-                <label for="Name">Employee ID:</label>
-                <input type="text" class="form-control" name="emp_id">
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-4"></div>
-            <div class="form-group col-md-4">
-                <label for="Email"> Salary:</label>
-                <input type="text" class="form-control" name="salary">
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-4"></div>
-            <div class="form-group col-md-4">
-                <strong> From date: </strong>
-                <input class="date form-control" type="text" id="datepicker" name="from_date">
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-4"></div>
-            <div class="form-group col-md-4">
-                <strong> To date : </strong>
-                <input class="date form-control" type="text" id="datepicker1" name="to_date">
-            </div>
-        </div>
+@extends('main')
 
-        <div class="row">
-            <div class="col-md-4"></div>
-            <div class="form-group col-md-4" style="margin-top:60px">
-                <button type="submit" class="btn btn-success" style="margin-left:38px">Update</button>
+@section('title', ' Edit Contract Info')
+
+@section('content')
+
+    <div class="col-md-10">
+
+        <h4>Edit Contract Form</h4>
+        <br>
+        <div class="card">
+            <div class="card-body">
+                <form method="post" action="/contracts/{{$id}}" enctype="multipart/form-data">
+                    <input name="_method" type="hidden" value="PATCH">
+                    @csrf
+                    <div class="form-group form-inline">
+                        <label style="padding-right: 10px" class="form-inline" for="Name">Name : </label>
+                        {{ $contracts->employee->first_name}} {{ $contracts->employee->last_name}}
+                    </div>
+                    <div class="form-group">
+                        <label style="padding-right: 10px" class="form-inline" for="from_date">Project_name : </label>
+                        <input type="text" class="form-control" value="{{$contracts->p_name}}" name="p_name">
+                    </div>
+                    <div class="form-group">
+                        <label style="padding-right: 10px" class="form-inline" for="from_date">From Date : </label>
+                        <input type="text" class="form-control date datepicker" value="{{$contracts->from_date}}" name="from_date" required>
+                    </div>
+                    <div class="form-group">
+                        <label style="padding-right: 10px" class="form-inline" for="to_date">To Date : </label>
+                        <input type="text" class="form-control date datepicker" value="{{$contracts->to_date}}" name="to_date" required>
+                    </div>
+                    <div class="form-group">
+                        <label style="padding-right: 10px" for="salary">Salary : </label>
+                        <input style="margin-right: 10px" type="text" class="form-control" value="{{$contracts->salary}}" name="salary" required>
+                    </div>
+                    <div class="text-right">
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                        <a  href="{{ URL::to( '/contracts') }}" class="btn btn-secondary">Cancel</a>
+                    </div>
+                </form>
             </div>
         </div>
-    </form>
-</div>
-<script type="text/javascript">
-    $('#datepicker').datepicker({
-        autoclose: true,
-        format: 'dd-mm-yyyy'
-    });
-    $('#datepicker1').datepicker({
-        autoclose: true,
-        format: 'dd-mm-yyyy'
-    });
-</script>
-</body>
-</html>
+    </div>
+@endsection

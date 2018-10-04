@@ -1,66 +1,50 @@
-<!DOCTYPE html >
-<html>
-<head>
-    <meta charset="utf-8">
-    <title> Lare </title>
-    <link rel="stylesheet" href="{{asset('css/app.css')}}">
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.5.0/css/bootstrap-datepicker.css"
-          rel="stylesheet">
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.5.0/js/bootstrap-datepicker.js"></script>
-</head>
-<body>
-<div class="container">
-    <h2> Contract System </h2><br/>
-    <form method="post" action="{{url('contracts')}}" enctype="multipart/form-data">
-        @csrf
-        <div class="row">
-            <div class="col-md-4"></div>
-            <div class="form-group col-md-4">
-                <label for="Name">Employee ID:</label>
-                <input type="text" class="form-control" name="emp_id">
+@extends('main')
+
+@section('title', ' Create Contract')
+
+@section('content')
+
+    <div class="col-md-10">
+
+        <h4>New Contract</h4>
+        <br>
+        <div class="card">
+            <div class="card-body">
+
+                <form method="post" action="{{url('contracts')}}" enctype="multipart/form-data">
+                    @csrf
+                    <div class="form-group">
+                        <div class="form-group" >
+                            <label style="padding-right: 10px" class="form-inline" for="Name">Name : </label>
+                            <select name="emp_id" id="emp_id" style="width: 100%" class="form-control">
+                                @foreach($employees as $values)
+                                    <option value="{{ $values->id }}">{{ $values->first_name }}&nbsp;{{ $values->last_name }}</option>
+                                @endforeach
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label style="padding-right: 10px" class="form-inline" for="from_date">Project name : </label>
+                        <input type="text" class="form-control" name="p_name">
+                    </div>
+                    <div class="form-group">
+                        <label style="padding-right: 10px" class="form-inline" for="from_date">From Date<sup style="color: red">*</sup> : </label>
+                        <input type="text" class="form-control date datepicker" name="from_date" required>
+                    </div>
+                    <div class="form-group">
+                        <label style="padding-right: 10px" class="form-inline" for="to_date">To Date<sup style="color: red">*</sup> : </label>
+                        <input type="text" class="form-control date datepicker" name="to_date" required>
+                    </div>
+                    <div class="form-group ">
+                        <label style="padding-right: 10px" class="form-inline" for="salary">Salary<sup style="color: red">*</sup> : </label>
+                        <input style="margin-right: 10px" type="text" class="form-control" placeholder="Salary" name="salary" required>
+                    </div>
+                    <div class="text-right">
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                        <button href="" class="btn btn-secondary">Cancel</button>
+                    </div>
+                </form>
             </div>
         </div>
-        <div class="row">
-            <div class="col-md-4"></div>
-            <div class="form-group col-md-4">
-                <label for="Email"> Salary:</label>
-                <input type="text" class="form-control" name="salary">
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-4"></div>
-            <div class="form-group col-md-4">
-                <strong> From date: </strong>
-                <input class="date form-control" type="text" id="datepicker" name="from_date">
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-4"></div>
-            <div class="form-group col-md-4">
-                <strong> To date : </strong>
-                <input class="date form-control" type="text" id="datepicker1" name="to_date">
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-4"></div>
-            <div class="form-group col-md-4" style="margin-top:60px">
-                <button type="submit" class="btn btn-success">Submit</button>
-            </div>
-        </div>
-    </form>
-</div>
-<script type="text/javascript">
-    $('#datepicker').datepicker({
-        autoclose: true,
-        format: 'dd-mm-yyyy'
-    });
-    $('#datepicker1').datepicker({
-        autoclose: true,
-        format: 'dd-mm-yyyy'
-    });
-</script>
-</body>
-</html>
+    </div>
+@endsection
